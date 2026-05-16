@@ -10,7 +10,8 @@ for(int counter=0; counter <10; counter++)
     int value =0;
     printf("%d\t", value);
     printf("%d\t", value*value);
-    printf("%d\t", value*value*value);
+    printf("%d\n", value*value*value);
+    value+= 1;
     }
 
 }
