@@ -27,11 +27,21 @@ int main(void) {
                 else
                     pay = wage * 40 + wage * 1.5 * (hours - 40);
                 break;
-                case 3: {
+            case 3: {
                 double sales;
                 printf("Enter weekly sales: ");
                 scanf("%lf", &sales);
                 pay = 250 + 0.057 * sales;
+                break;
+            }
+            case 4: {
+                double pricePerItem;
+                int items;
+                printf("Enter price per item: ");
+                scanf("%lf", &pricePerItem);
+                printf("Enter number of items produced: ");
+                scanf("%d", &items);
+                pay = pricePerItem * items;
                 break;
             }
             }
