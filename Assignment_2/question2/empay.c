@@ -27,6 +27,13 @@ int main(void) {
                 else
                     pay = wage * 40 + wage * 1.5 * (hours - 40);
                 break;
+                case 3: {
+                double sales;
+                printf("Enter weekly sales: ");
+                scanf("%lf", &sales);
+                pay = 250 + 0.057 * sales;
+                break;
+            }
             }
             default:
                 printf("Invalid pay code. Please enter 1-4.\n");
