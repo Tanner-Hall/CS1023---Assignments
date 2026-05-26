@@ -9,3 +9,8 @@ scanf("%d", &b);
 printf("the greatest common divisor of %d and %d is %d\n",a,b, gcd(a,b));
 
 }
+int gcd(int x, int y){
+if (y==0){
+    return x;}
+return (gcd( y, x % y));
+}
