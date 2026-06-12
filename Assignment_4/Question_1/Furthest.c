@@ -26,3 +26,26 @@ if (isValid == 0) {
     printf("The furthest distance possible is: %d\n", result);
 }
 }
+int furthestDistanceFromOrigin(const char moves[]) {
+    int lCount = 0;
+    int rCount = 0;
+    int wildCount = 0;
+    int i = 0;
+    while (moves[i] != '\0') {
+        if (moves[i] == 'L') {
+            lCount++;
+        } else if (moves[i] == 'R') {
+            rCount++;
+        } else if (moves[i] == '_') {
+            wildCount++;
+        }
+        i++;
+    }
+    int difference;
+    if (lCount > rCount) {
+        difference = lCount - rCount;
+    } else {
+        difference = rCount - lCount;
+    }
+    return difference + wildCount;
+}
