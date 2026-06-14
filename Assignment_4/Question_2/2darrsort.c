@@ -26,3 +26,16 @@ int main() {
     };
     runTest(array3, "Test 3: Already Sorted Array");
 }
+
+void displayArray(int arr[ROWS][COLS]) {
+    int r = 0;
+    while (r < ROWS) {
+        int c = 0;
+        while (c < COLS) {
+            printf("%4d ", arr[r][c]);
+            c++;
+        }
+        printf("\n"); 
+        r++;
+    }
+}
