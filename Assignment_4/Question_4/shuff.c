@@ -114,6 +114,7 @@ int hasThreeOfAKind(const int faceCounts[]) {
             return 1;
         }
     }
+    return 0;
 }
 
 int hasFourOfAKind(const int faceCounts[]) {
@@ -122,6 +123,7 @@ int hasFourOfAKind(const int faceCounts[]) {
             return 1;
         }
     }
+    return 0;
 }
 
 int hasFlush(const int suitCounts[]) {
@@ -150,4 +152,16 @@ if (faceCounts[9] == 1 && faceCounts[10] == 1 && faceCounts[11] == 1 &&
 faceCounts[12] == 1 && faceCounts[0] == 1) {
 return 1;
 }
+}
+void shuffle(int deck[][FACES]) {
+    for (size_t card = 1; card <= CARDS; ++card) {
+        size_t row = 0; 
+        size_t column = 0; 
+        do {
+            row = rand() % SUITS;
+            column = rand() % FACES;
+        } while(deck[row][column] != 0);
+
+        deck[row][column] = card;
+    }
 }
