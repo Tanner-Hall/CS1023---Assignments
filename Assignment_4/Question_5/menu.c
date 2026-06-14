@@ -58,3 +58,12 @@ printf("[CALCULATION TYPE]: Multiplication\n");
 printf("[INPUT PARAMETERS]: Value A = %.4f | Value B = %.4f\n", a, b);
 printf("[EXECUTION RESULT]: %.4f * %.4f = %.4f\n", a, b, a * b);
 }
+void divide(double a, double b) {
+printf("[CALCULATION TYPE]: Division\n");
+printf("[INPUT PARAMETERS]: Value A = %.4f | Value B = %.4f\n", a, b);
+if (b == 0.0) {
+    printf("[EXECUTION RESULT]: Error! Division by zero is mathematically undefined.\n");
+} else {
+    printf("[EXECUTION RESULT]: %.4f / %.4f = %.4f\n", a, b, a / b);
+}
+}
