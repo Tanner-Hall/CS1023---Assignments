@@ -71,3 +71,19 @@ void printHand(const int handFaces[], const int handSuits[], const char *face[],
         printf("  Card %d: %5s of %s\n", (int)i + 1, face[handFaces[i]], suit[handSuits[i]]);
     }
 }
+void evaluateHand(const int handFaces[], const int handSuits[], const char *title) {
+    int faceCounts[FACES] = {0};
+    int suitCounts[SUITS] = {0};
+    for (size_t i = 0; i < HAND_SIZE; ++i) {
+        faceCounts[handFaces[i]]++;
+        suitCounts[handSuits[i]]++;
+    }
+    printf("\n>>> Evaluation: %s\n", title);
+    printf("  One Pair?:        %s\n", hasOnePair(faceCounts)     ? "YES" : "No");
+    printf("  Two Pairs?:       %s\n", hasTwoPairs(faceCounts)    ? "YES" : "No");
+    printf("  Three of a Kind?: %s\n", hasThreeOfAKind(faceCounts)? "YES" : "No");
+    printf("  Four of a Kind?:  %s\n", hasFourOfAKind(faceCounts) ? "YES" : "No");
+    printf("  Flush?:           %s\n", hasFlush(suitCounts)       ? "YES" : "No");
+    printf("  Straight?:        %s\n", hasStraight(faceCounts)    ? "YES" : "No");
+    printf("-----------------------------------------\n");
+}
