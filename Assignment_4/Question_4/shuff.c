@@ -131,3 +131,23 @@ int hasFlush(const int suitCounts[]) {
         }
     }
 }
+int hasStraight(const int faceCounts[]) {
+int consecutive = 0;
+
+for (size_t i = 0; i < FACES; ++i) {
+    if (faceCounts[i] == 1) {
+        consecutive++;
+        if (consecutive == 5) {
+            return 1;
+        }
+        } else if (faceCounts[i] > 1) {
+            return 0;
+        } else {
+            consecutive = 0;
+    }
+}
+if (faceCounts[9] == 1 && faceCounts[10] == 1 && faceCounts[11] == 1 && 
+faceCounts[12] == 1 && faceCounts[0] == 1) {
+return 1;
+}
+}
