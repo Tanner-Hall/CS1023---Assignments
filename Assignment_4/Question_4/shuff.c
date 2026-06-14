@@ -51,5 +51,18 @@ int main(void) {
     int straightFaces[HAND_SIZE] = {9, 10, 11, 12, 0}; 
     int straightSuits[HAND_SIZE] = {0, 1, 2, 3, 0};
     evaluateHand(straightFaces, straightSuits, "Test 6: Straight (Ace High)");
-    return 0;
+}
+void dealHand(int deck[][FACES], int handFaces[], int handSuits[]) {
+    size_t handIndex = 0;
+    for (size_t card = 1; card <= HAND_SIZE; ++card) {
+        for (size_t row = 0; row < SUITS; ++row) {
+            for (size_t column = 0; column < FACES; ++column) {
+                if (deck[row][column] == card) {
+                    handFaces[handIndex] = column; 
+                    handSuits[handIndex] = row; 
+                    handIndex++;
+                }
+            }
+        }
+    }
 }
