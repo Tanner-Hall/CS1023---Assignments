@@ -65,3 +65,15 @@ int solveMaze(char maze[ROWS][COLS], int r, int c) {
     
     return 0;
 }
+void printMaze(char maze[ROWS][COLS]) {
+    int r = 0;
+    while (r < ROWS) {
+        int c = 0;
+        while (c < COLS) {
+            printf("%c ", maze[r][c]);
+            c++;
+        }
+        printf("\n");
+        r++;
+    }
+}
