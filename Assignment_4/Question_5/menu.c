@@ -48,3 +48,8 @@ printf("[CALCULATION TYPE]: Addition\n");
 printf("[INPUT PARAMETERS]: Value A = %.4f | Value B = %.4f\n", a, b);
 printf("[EXECUTION RESULT]: %.4f + %.4f = %.4f\n", a, b, a + b);
 }
+void subtract(double a, double b) {
+printf("[CALCULATION TYPE]: Subtraction\n");
+printf("[INPUT PARAMETERS]: Value A = %.4f | Value B = %.4f\n", a, b);
+printf("[EXECUTION RESULT]: %.4f - %.4f = %.4f\n", a, b, a - b);
+}
