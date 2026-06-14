@@ -59,3 +59,17 @@ j++;
 i++;
 }
 }
+void runTest(int arr[ROWS][COLS], const char* testName) {
+    printf("=========================================\n");
+    printf("%s\n", testName);
+    printf("=========================================\n");
+    
+    printf("Original array:\n");
+    displayArray(arr);
+    
+    sort2DArray(arr);
+    
+    printf("\nSorted array:\n");
+    displayArray(arr);
+    printf("\n");
+}
