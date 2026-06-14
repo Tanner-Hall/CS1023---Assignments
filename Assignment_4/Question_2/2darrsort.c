@@ -39,3 +39,23 @@ void displayArray(int arr[ROWS][COLS]) {
         r++;
     }
 }
+void sort2DArray(int arr[ROWS][COLS]) {
+int totalElements = ROWS * COLS;
+int i = 0;
+while (i < totalElements - 1) {
+int j = 0;
+while (j < totalElements - 1 - i) {
+int row1 = j / COLS;
+int col1 = j % COLS;
+int row2 = (j + 1) / COLS;
+int col2 = (j + 1) % COLS;
+if (arr[row1][col1] > arr[row2][col2]) {
+int temp = arr[row1][col1];
+arr[row1][col1] = arr[row2][col2];
+arr[row2][col2] = temp;
+}
+j++;
+}
+i++;
+}
+}
