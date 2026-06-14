@@ -115,3 +115,19 @@ int hasThreeOfAKind(const int faceCounts[]) {
         }
     }
 }
+
+int hasFourOfAKind(const int faceCounts[]) {
+    for (size_t i = 0; i < FACES; ++i) {
+        if (faceCounts[i] == 4) {
+            return 1;
+        }
+    }
+}
+
+int hasFlush(const int suitCounts[]) {
+    for (size_t i = 0; i < SUITS; ++i) {
+        if (suitCounts[i] == 5) {
+            return 1;
+        }
+    }
+}
