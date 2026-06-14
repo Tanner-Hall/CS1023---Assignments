@@ -66,3 +66,8 @@ void dealHand(int deck[][FACES], int handFaces[], int handSuits[]) {
         }
     }
 }
+void printHand(const int handFaces[], const int handSuits[], const char *face[], const char *suit[]) {
+    for (size_t i = 0; i < HAND_SIZE; ++i) {
+        printf("  Card %d: %5s of %s\n", (int)i + 1, face[handFaces[i]], suit[handSuits[i]]);
+    }
+}
