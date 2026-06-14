@@ -87,3 +87,31 @@ void evaluateHand(const int handFaces[], const int handSuits[], const char *titl
     printf("  Straight?:        %s\n", hasStraight(faceCounts)    ? "YES" : "No");
     printf("-----------------------------------------\n");
 }
+
+int hasOnePair(const int faceCounts[]) {
+    int pairs = 0;
+    for (size_t i = 0; i < FACES; ++i) {
+        if (faceCounts[i] == 2) {
+            pairs++;
+        }
+    }
+    return (pairs == 1);
+}
+
+int hasTwoPairs(const int faceCounts[]) {
+    int pairs = 0;
+    for (size_t i = 0; i < FACES; ++i) {
+        if (faceCounts[i] == 2) {
+            pairs++;
+        }
+    }
+    return (pairs == 2);
+}
+
+int hasThreeOfAKind(const int faceCounts[]) {
+    for (size_t i = 0; i < FACES; ++i) {
+        if (faceCounts[i] == 3) {
+            return 1;
+        }
+    }
+}
